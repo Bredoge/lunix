@@ -92,6 +92,53 @@ ssh pomocnik_admina@localhost</p>
 
   <div class="w3-row">
     <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">2</h1>
+      <p>
+z:1<br>
+su<br>
+cd /etc/skel<br>
+vi.bashrc<br>
+(w pliku)<br>
+echo „WITAJ $USER”<br>
+(po wyjściu z pliku)<br>
+exit<br>
+
+z:2<br>
+sudo mkdir /informacje
+tworzenie partycji w YAST (włącz usługe przydziałów w fstab)
+sudo zypper install quota
+sudo touch /informacje/aquota.geeko
+sudo edquota geeko
+
+z:3<br>
+użytkownik w yast z zaznaczonym brakiem możliwości logowania sie<br>
+ssh-keygen -t rsa<br>
+cd /home/geeko/.ssh<br>
+ls -a<br>
+cd /home/geeko<br>
+(sudo su) cat id_rsa.pub >> /home/pomocnik_admina/.ssh/authorized_keys<br>
+(mkdir /home/pomocnik_admina/.ssh touch /home/pomocnik_admina/.ssh/authorized_keys)<br>
+mkdir /home/pomocnik_admina/.ssh<br>
+touch /home/pomocnik_admina/.ssh/authorized_keys)<br>
+sudo systemctl start sshd<br>
+ssh pomocnik_admina@localhost<br>
+
+z:4<br>
+Zdjęcie
+
+z:5<br>
+Zdjęcie notatnik</p>
+
+
+
+    </div>
+    <div class="w3-third w3-container">
+
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">3</h1><p>
 
 z:1<br>
@@ -131,53 +178,6 @@ z:5<br>
 Yast
 
 </p>
-
-
-
-    </div>
-    <div class="w3-third w3-container">
-
-    </div>
-  </div>
-
-  <div class="w3-row w3-padding-64">
-    <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">2</h1>
-      <p>
-z:1<br>
-su<br>
-cd /etc/skel<br>
-vi.bashrc<br>
-(w pliku)<br>
-echo „WITAJ $USER”<br>
-(po wyjściu z pliku)<br>
-exit<br>
-
-z:2<br>
-sudo mkdir /informacje
-tworzenie partycji w YAST (włącz usługe przydziałów w fstab)
-sudo zypper install quota
-sudo touch /informacje/aquota.geeko
-sudo edquota geeko
-
-z:3<br>
-użytkownik w yast z zaznaczonym brakiem możliwości logowania sie<br>
-ssh-keygen -t rsa<br>
-cd /home/geeko/.ssh<br>
-ls -a<br>
-cd /home/geeko<br>
-(sudo su) cat id_rsa.pub >> /home/pomocnik_admina/.ssh/authorized_keys<br>
-(mkdir /home/pomocnik_admina/.ssh touch /home/pomocnik_admina/.ssh/authorized_keys)<br>
-mkdir /home/pomocnik_admina/.ssh<br>
-touch /home/pomocnik_admina/.ssh/authorized_keys)<br>
-sudo systemctl start sshd<br>
-ssh pomocnik_admina@localhost<br>
-
-z:4<br>
-Zdjęcie
-
-z:5<br>
-Zdjęcie notatnik</p>
     </div>
 
   </div>
