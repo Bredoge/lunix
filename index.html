@@ -65,8 +65,110 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <div class="w3-row">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+     TEST 3
+Zadanie 1
+sudo useradd tux4
+sudo passwd tux4
+
+sudo useradd tux5
+sudo passwd tux5
+
+sudo visudo
+root ALL=(ALL:ALL) ALL (po tej linijce)
+tux4 ALL=(ALL) NOPASSWD: /bin/nice, /bin/passwd, /bin/reboot
+tux5 ALL=(ALL) NOPASSWD: /bin/nice, /bin/passwd, /bin/reboot
+
+Zadanie 2
+użytkownik w yast z zaznaczonym brakiem możliwości logowania sie
+ssh-keygen -t rsa
+cd /home/geeko/.ssh
+ls -a
+cd /home/geeko
+(sudo su) cat id_rsa.pub >> /home/pomocnik_admina/.ssh/authorized_keys
+(ew
+mkdir /home/pomocnik_admina/.ssh
+touch /home/pomocnik_admina/.ssh/authorized_keys)
+sudo systemctl start sshd
+ssh pomocnik_admina@localhost
+
+Zadanie 3
+
+which id > /tmpexamtmp/whoami
+
+Zadanie 4
+
+cat /tmpexamtmp/logi_test | grep "paź 21 15:[00-10]:*" | grep failure > /tmpexamtmp/ssh_15
+
+Zadanie 5
+Yast
+
+TEST 1
+Zadanie 1
+WSZYSTKO W YAST
+Partycjonowanie > sdb > dodaj partycje > wybieramy 1GB i tworzymy
+Partycjonowanie > sdc > dodaj partycje > wybieramy 1GB i tworzymy
+RAID > dodaj RAID > RAID 1 > dodajemy wcześniej utworzone partycje > tworzymy > edytujemy > system plików: ext3 > montowanie urządzenia: miejsce - /security_backup, opcje: etykieta - MACIERZ
+
+Zadanie 2
+Yast
+
+Zadanie 3
+Yast
+sudo chown /pingwiny/tux5 tux5
+sudo chmod 777 /pingwiny/share
+
+Zadanie 4
+sudo chmod 007 /usr/bin/id
+
+Zadanie 5
+użytkownik w yast z zaznaczonym brakiem możliwości logowania sie
+ssh-keygen -t rsa
+cd /home/geeko/.ssh
+ls -a
+cd /home/geeko
+(sudo su) cat id_rsa.pub >> /home/pomocnik_admina/.ssh/authorized_keys
+(ew
+mkdir /home/pomocnik_admina/.ssh
+touch /home/pomocnik_admina/.ssh/authorized_keys)
+sudo systemctl start sshd
+ssh pomocnik_admina@localhost
+
+
+TEST 2
+Zadanie 1
+su
+cd /etc/skel
+vi.bashrc
+(w pliku)
+echo „WITAJ $USER”
+(po wyjściu z pliku)
+exit
+
+Zadanie 2
+sudo mkdir /informacje
+tworzenie partycji w YAST (włącz usługe przydziałów w fstab)
+sudo zypper install quota
+sudo touch /informacje/aquota.geeko
+sudo edquota geeko
+
+Zadanie 3
+użytkownik w yast z zaznaczonym brakiem możliwości logowania sie
+ssh-keygen -t rsa
+cd /home/geeko/.ssh
+ls -a
+cd /home/geeko
+(sudo su) cat id_rsa.pub >> /home/pomocnik_admina/.ssh/authorized_keys
+(ew
+mkdir /home/pomocnik_admina/.ssh
+touch /home/pomocnik_admina/.ssh/authorized_keys)
+sudo systemctl start sshd
+ssh pomocnik_admina@localhost
+
+Zadanie 4
+Zdjęcie
+
+Zadanie 5
+Zdjęcie notatnik
     </div>
     <div class="w3-third w3-container">
 
